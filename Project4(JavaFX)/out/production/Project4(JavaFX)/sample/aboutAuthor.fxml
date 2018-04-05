@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
+   <children>
+      <TextArea layoutX="18.0" layoutY="36.0" prefHeight="78.0" prefWidth="565.0" text="Imię: Rafał                                                           Nazwisko: Chajec&#10;Uczelnia: Akademia Górniczo-Hutnicza              Kierunek: Informatyka Stosowana                      &#10;Data urodzenia: 09.10.1997                                Miejsce urodzenia: Dębica&#10;" AnchorPane.bottomAnchor="286.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="36.0" />
+      <ImageView fx:id="imageAvatar" fitHeight="199.0" fitWidth="296.0" layoutX="148.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="35.45599365234375" AnchorPane.rightAnchor="156.0">
+         <image>
+            <Image url="@../../5a59e44d5ff42.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

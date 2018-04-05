@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Canvas fx:id="canvas" height="319.0" layoutY="41.0" width="464.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" />
+
+
+
+      <ListView fx:id="timeList" layoutX="525.0" layoutY="56.0" prefHeight="319.0" prefWidth="447.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="525.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="56.0">
+         <contextMenu>
+            <ContextMenu fx:id="Delete" onAction="#deleteAlarm">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Delete" />
+              </items>
+            </ContextMenu>
+         </contextMenu></ListView>
+      <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="25.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Program                                                                                                                   ">
+              <items>
+                <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#closeProgram" text="Zamknij" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Budzik                                                                                                                    ">
+            <items>
+              <MenuItem fx:id="menuAdd" mnemonicParsing="false" onAction="#goToAddClock" text="Dodaj alarm" />
+                  <MenuItem fx:id="menuDelete" mnemonicParsing="false" onAction="#cancelAlarms" text="Wyczyść alarmy" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false">
+               <graphic>
+                  <Button fx:id="buttonAbout" mnemonicParsing="false" onAction="#goToSecond" text="O autorze" />
+               </graphic></Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
