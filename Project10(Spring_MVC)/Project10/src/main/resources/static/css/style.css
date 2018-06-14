@@ -1,0 +1,11 @@
+body {
+    background-color: #123300;
+    color: #fff;
+}
+
+.max-height{
+    max-height: 200px;
+}
+.max-wdith{
+    max-width: 200px;
+}

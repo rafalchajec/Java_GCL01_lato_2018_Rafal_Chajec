@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+
+
+    <script>
+        function DeleteAction(pictureId) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("DELETE", `http://localhost:8080/gallery/${pictureId}` , true);
+        xhttp.send();
+        location.reload();
+        }
+    </script>
+</head>
+<body>
+
+    <table class="table">
+
+        <tbody>
+
+
+
+
+
+        <tr th:each="picture : ${images}">
+            <th><img class="max-height max-wdith" th:src="@{${'img/' + picture.name}}"/></th>
+            <td th:text="${picture.index}">Index</td>
+            <td th:text="${picture.name}">Picture Name</td>
+            <td th:text="${picture.resolution}">Picture Resolution</td>
+            <td th:text="${picture.size}">Picture Size</td>
+            <td th:text="${picture.date}">Picture Date</td>
+            <td>
+                <button type="button" th:onclick="'DeleteAction(\'' + ${picture.name} + '\');'">Delete</button>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

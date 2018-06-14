@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+
+</head>
+<body>
+<div class="container">
+    <table class="table">
+
+        <tbody>
+
+        <tr th:each="picture : ${images}">
+
+            <th><img th:src="@{${'/img/' + picture.name}}"/></th>
+            <td th:text="${picture.index}">Index</td>
+            <td th:text="${picture.name}">Picture Name</td>
+            <td th:text="${picture.resolution}">Picture Resolution</td>
+            <td th:text="${picture.size}">Picture Size</td>
+            <td th:text="${picture.date}">Picture Date</td>
+
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
